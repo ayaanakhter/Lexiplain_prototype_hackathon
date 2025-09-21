@@ -1,7 +1,10 @@
 from flask import Flask, request, jsonify
 import joblib
+from flask_cors import CORS # 👈 1. IMPORT THIS
 
 app = Flask(__name__)
+CORS(app) # 👈 2. INITIALIZE CORS
+
 
 # Load the trained model and vectorizer
 try:
